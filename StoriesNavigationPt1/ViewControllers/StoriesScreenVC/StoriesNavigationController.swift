@@ -1,5 +1,5 @@
 //
-//  StoriesScreenViewController.swift
+//  StoriesNavigationController.swift
 //  StoriesNavigations
 //
 //  Created by Semyon on 27.11.2020.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class StoriesScreenViewController: UINavigationController {
+class StoriesNavigationController: UINavigationController {
         
     // MARK: - Private properties
-    private var viewModel: StoriesScreenViewModelProtocol?
-    private var previewFrame: IPreviewFrame?
+    private var viewModel: StoriesNavigationViewModelProtocol?
+    private var previewFrame: PreviewFrameProtocol?
     
     // MARK: - Setup
-    func setup(viewModel: StoriesScreenViewModelProtocol, viewControllers: [UIViewController], previewFrame: IPreviewFrame?) {
+    func setup(viewModel: StoriesNavigationViewModelProtocol, viewControllers: [UIViewController], previewFrame: PreviewFrameProtocol?) {
         self.viewModel = viewModel
         self.previewFrame = previewFrame
         self.viewControllers = viewControllers
@@ -28,7 +28,7 @@ class StoriesScreenViewController: UINavigationController {
     
 }
 
-extension StoriesScreenViewController {
+extension StoriesNavigationController {
     
     private func setupUI() {
         setNavigationBarHidden(true, animated: false)
@@ -38,7 +38,7 @@ extension StoriesScreenViewController {
     
 }
 
-extension StoriesScreenViewController: UIViewControllerTransitioningDelegate {
+extension StoriesNavigationController: UIViewControllerTransitioningDelegate {
     
     public func animationController(
         forPresented presented: UIViewController,
@@ -46,14 +46,14 @@ extension StoriesScreenViewController: UIViewControllerTransitioningDelegate {
         source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         guard let startFrame = previewFrame?.startFrame else { return nil }
-        return StoriesScreenAnimatorPresent(startFrame: startFrame)
+        return StoriesNavigationPresentAnimator(startFrame: startFrame)
     }
     
     public func animationController(
         forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         guard let endFrame = previewFrame?.endFrame else { return nil }
-        return StoriesScreenAnimatorDismiss(endFrame: endFrame)
+        return StoriesNavigationDismissAnimator(endFrame: endFrame)
     }
     
 }

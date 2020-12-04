@@ -67,8 +67,8 @@ extension ViewController {
             return [vc1, vc2, vc3]
         }
         
-        let storiesVC = StoriesScreenViewController()
-        storiesVC.setup(viewModel: StoriesScreenViewModel(), viewControllers: storyViewControllers, previewFrame: previewView)
+        let storiesVC = StoriesNavigationController()
+        storiesVC.setup(viewModel: StoriesNavigationViewModel(), viewControllers: storyViewControllers, previewFrame: previewView)
         
         present(storiesVC, animated: true, completion: nil)
     }

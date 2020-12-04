@@ -1,5 +1,5 @@
 //
-//  StoriesScreenAnimatorPresent.swift
+//  StoriesNavigationPresentAnimator.swift
 //  StoriesNavigations
 //
 //  Created by Semyon on 27.11.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoriesScreenAnimatorPresent: NSObject, UIViewControllerAnimatedTransitioning {
+class StoriesNavigationPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     private enum Spec {
         static let animationDuration: TimeInterval = 0.3
@@ -26,8 +26,8 @@ class StoriesScreenAnimatorPresent: NSObject, UIViewControllerAnimatedTransition
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         // 1
-        guard let vcTo = transitionContext.viewController(forKey: .to),
-              let snapshot = vcTo.view.snapshotView(afterScreenUpdates: true)
+        guard let toViewController = transitionContext.viewController(forKey: .to),
+              let snapshot = toViewController.view.snapshotView(afterScreenUpdates: true)
         else {
             return
         }
@@ -36,8 +36,8 @@ class StoriesScreenAnimatorPresent: NSObject, UIViewControllerAnimatedTransition
         let containerView = transitionContext.containerView
         
         // 3
-        containerView.addSubview(vcTo.view)
-        vcTo.view.isHidden = true
+        containerView.addSubview(toViewController.view)
+        toViewController.view.isHidden = true
 
         // 4
         snapshot.frame = startFrame
@@ -47,16 +47,16 @@ class StoriesScreenAnimatorPresent: NSObject, UIViewControllerAnimatedTransition
 
         UIView.animate(withDuration: Spec.animationDuration, animations: {
             // 5
-            snapshot.frame = (transitionContext.finalFrame(for: vcTo))
+            snapshot.frame = (transitionContext.finalFrame(for: toViewController))
             snapshot.alpha = 1.0
         }, completion: { _ in
             // 6
-            vcTo.view.isHidden = false
+            toViewController.view.isHidden = false
             snapshot.removeFromSuperview()
             
             // 7
             if transitionContext.transitionWasCancelled {
-                vcTo.view.removeFromSuperview()
+                toViewController.view.removeFromSuperview()
             }
             
             // 8

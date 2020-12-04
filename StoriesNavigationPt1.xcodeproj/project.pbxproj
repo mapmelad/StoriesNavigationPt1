@@ -15,10 +15,10 @@
 		13AF66A72576C7E7008A9475 /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66A52576C7E7008A9475 /* UIColor+random.swift */; };
 		13AF66A82576C7E7008A9475 /* PreviewStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66A62576C7E7008A9475 /* PreviewStoryView.swift */; };
 		13AF66B52576C7ED008A9475 /* StoryBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66AC2576C7ED008A9475 /* StoryBaseViewController.swift */; };
-		13AF66B62576C7ED008A9475 /* StoriesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66AE2576C7ED008A9475 /* StoriesScreenViewController.swift */; };
-		13AF66B72576C7ED008A9475 /* StoriesScreenAnimatorDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B02576C7ED008A9475 /* StoriesScreenAnimatorDismiss.swift */; };
-		13AF66B82576C7ED008A9475 /* StoriesScreenAnimatorPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B12576C7ED008A9475 /* StoriesScreenAnimatorPresent.swift */; };
-		13AF66B92576C7ED008A9475 /* StoriesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B22576C7ED008A9475 /* StoriesScreenViewModel.swift */; };
+		13AF66B62576C7ED008A9475 /* StoriesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66AE2576C7ED008A9475 /* StoriesNavigationController.swift */; };
+		13AF66B72576C7ED008A9475 /* StoriesNavigationDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B02576C7ED008A9475 /* StoriesNavigationDismissAnimator.swift */; };
+		13AF66B82576C7ED008A9475 /* StoriesNavigationPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B12576C7ED008A9475 /* StoriesNavigationPresentAnimator.swift */; };
+		13AF66B92576C7ED008A9475 /* StoriesNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B22576C7ED008A9475 /* StoriesNavigationViewModel.swift */; };
 		13AF66BA2576C7ED008A9475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AF66B42576C7ED008A9475 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +33,10 @@
 		13AF66A52576C7E7008A9475 /* UIColor+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+random.swift"; sourceTree = "<group>"; };
 		13AF66A62576C7E7008A9475 /* PreviewStoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewStoryView.swift; sourceTree = "<group>"; };
 		13AF66AC2576C7ED008A9475 /* StoryBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBaseViewController.swift; sourceTree = "<group>"; };
-		13AF66AE2576C7ED008A9475 /* StoriesScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesScreenViewController.swift; sourceTree = "<group>"; };
-		13AF66B02576C7ED008A9475 /* StoriesScreenAnimatorDismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesScreenAnimatorDismiss.swift; sourceTree = "<group>"; };
-		13AF66B12576C7ED008A9475 /* StoriesScreenAnimatorPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesScreenAnimatorPresent.swift; sourceTree = "<group>"; };
-		13AF66B22576C7ED008A9475 /* StoriesScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesScreenViewModel.swift; sourceTree = "<group>"; };
+		13AF66AE2576C7ED008A9475 /* StoriesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesNavigationController.swift; sourceTree = "<group>"; };
+		13AF66B02576C7ED008A9475 /* StoriesNavigationDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesNavigationDismissAnimator.swift; sourceTree = "<group>"; };
+		13AF66B12576C7ED008A9475 /* StoriesNavigationPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesNavigationPresentAnimator.swift; sourceTree = "<group>"; };
+		13AF66B22576C7ED008A9475 /* StoriesNavigationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesNavigationViewModel.swift; sourceTree = "<group>"; };
 		13AF66B42576C7ED008A9475 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +110,9 @@
 		13AF66AD2576C7ED008A9475 /* StoriesScreenVC */ = {
 			isa = PBXGroup;
 			children = (
-				13AF66AE2576C7ED008A9475 /* StoriesScreenViewController.swift */,
+				13AF66AE2576C7ED008A9475 /* StoriesNavigationController.swift */,
 				13AF66AF2576C7ED008A9475 /* Animators */,
-				13AF66B22576C7ED008A9475 /* StoriesScreenViewModel.swift */,
+				13AF66B22576C7ED008A9475 /* StoriesNavigationViewModel.swift */,
 			);
 			path = StoriesScreenVC;
 			sourceTree = "<group>";
@@ -120,8 +120,8 @@
 		13AF66AF2576C7ED008A9475 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
-				13AF66B02576C7ED008A9475 /* StoriesScreenAnimatorDismiss.swift */,
-				13AF66B12576C7ED008A9475 /* StoriesScreenAnimatorPresent.swift */,
+				13AF66B02576C7ED008A9475 /* StoriesNavigationDismissAnimator.swift */,
+				13AF66B12576C7ED008A9475 /* StoriesNavigationPresentAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -214,16 +214,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13AF66B92576C7ED008A9475 /* StoriesScreenViewModel.swift in Sources */,
+				13AF66B92576C7ED008A9475 /* StoriesNavigationViewModel.swift in Sources */,
 				13AF66A72576C7E7008A9475 /* UIColor+random.swift in Sources */,
-				13AF66B82576C7ED008A9475 /* StoriesScreenAnimatorPresent.swift in Sources */,
-				13AF66B72576C7ED008A9475 /* StoriesScreenAnimatorDismiss.swift in Sources */,
+				13AF66B82576C7ED008A9475 /* StoriesNavigationPresentAnimator.swift in Sources */,
+				13AF66B72576C7ED008A9475 /* StoriesNavigationDismissAnimator.swift in Sources */,
 				13AF66BA2576C7ED008A9475 /* ViewController.swift in Sources */,
 				13AF66A82576C7E7008A9475 /* PreviewStoryView.swift in Sources */,
 				13AF66902576C7BE008A9475 /* AppDelegate.swift in Sources */,
 				13AF66922576C7BE008A9475 /* SceneDelegate.swift in Sources */,
 				13AF66B52576C7ED008A9475 /* StoryBaseViewController.swift in Sources */,
-				13AF66B62576C7ED008A9475 /* StoriesScreenViewController.swift in Sources */,
+				13AF66B62576C7ED008A9475 /* StoriesNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
