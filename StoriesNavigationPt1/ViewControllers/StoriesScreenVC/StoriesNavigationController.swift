@@ -11,10 +11,10 @@ class StoriesNavigationController: UINavigationController {
         
     // MARK: - Private properties
     private var viewModel: StoriesNavigationViewModelProtocol?
-    private var previewFrame: PreviewFrameProtocol?
+    private var previewFrame: PreviewStoryViewProtocol?
     
     // MARK: - Setup
-    func setup(viewModel: StoriesNavigationViewModelProtocol, viewControllers: [UIViewController], previewFrame: PreviewFrameProtocol?) {
+    func setup(viewModel: StoriesNavigationViewModelProtocol, viewControllers: [UIViewController], previewFrame: PreviewStoryViewProtocol?) {
         self.viewModel = viewModel
         self.previewFrame = previewFrame
         self.viewControllers = viewControllers
